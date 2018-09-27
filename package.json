@@ -1,0 +1,60 @@
+{
+  "_from": "css-loader-relative@^0.0.2",
+  "_id": "css-loader-relative@0.0.2",
+  "_inBundle": false,
+  "_location": "/css-loader-relative",
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "css-loader-relative@^0.0.2",
+    "name": "css-loader-relative",
+    "escapedName": "css-loader-relative",
+    "rawSpec": "^0.0.2",
+    "saveSpec": null,
+    "fetchSpec": "^0.0.2"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/css-loader-relative/-/css-loader-relative-0.0.2.tgz",
+  "_spec": "css-loader-relative@^0.0.2",
+  "author": {
+    "name": "cl"
+  },
+  "bugs": {
+    "url": "https://github.com/xxxxst/css-loader-relative/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "loader-utils": "^1.0.2"
+  },
+  "deprecated": false,
+  "description": "css-loader replace url to relative",
+  "devDependencies": {
+	  
+  },
+  "engines": {
+    "node": ">=0.12.0 || >= 4.3.0 < 5.0.0 || >=5.10"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "homepage": "https://github.com/xxxxst/css-loader-relative",
+  "license": "MIT",
+  "name": "css-loader-relative",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxxxst/css-loader-relative.git"
+  },
+  "scripts": {
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+    "lint": "eslint lib test",
+    "release": "standard-version",
+    "test": "mocha",
+    "test:cover": "npm run cover -- --report lcovonly",
+    "travis:lint": "npm run lint",
+    "travis:test": "npm run cover"
+  },
+  "version": "0.0.2"
+}
