@@ -1,23 +1,23 @@
 {
-  "_from": "css-loader-relative@^0.0.2",
-  "_id": "css-loader-relative@0.0.2",
+  "_from": "css-loader-relative@^0.0.3",
+  "_id": "css-loader-relative@0.0.3",
   "_inBundle": false,
   "_location": "/css-loader-relative",
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "css-loader-relative@^0.0.2",
+    "raw": "css-loader-relative@^0.0.3",
     "name": "css-loader-relative",
     "escapedName": "css-loader-relative",
-    "rawSpec": "^0.0.2",
+    "rawSpec": "^0.0.3",
     "saveSpec": null,
-    "fetchSpec": "^0.0.2"
+    "fetchSpec": "^0.0.3"
   },
   "_requiredBy": [
     "#DEV:/"
   ],
-  "_resolved": "https://registry.npmjs.org/css-loader-relative/-/css-loader-relative-0.0.2.tgz",
-  "_spec": "css-loader-relative@^0.0.2",
+  "_resolved": "https://registry.npmjs.org/css-loader-relative/-/css-loader-relative-0.0.3.tgz",
+  "_spec": "css-loader-relative@^0.0.3",
   "author": {
     "name": "cl"
   },
@@ -56,5 +56,5 @@
     "travis:lint": "npm run lint",
     "travis:test": "npm run cover"
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

@@ -74,4 +74,4 @@ module.exports = {
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2018-present, Chen Lin
+Copyright (c) 2018-present, xxxxst
