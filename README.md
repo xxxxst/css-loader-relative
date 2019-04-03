@@ -1,12 +1,14 @@
 # css-loader-relative
 css-loader replace url to relative path
 
-[https://github.com/xxxxst/css-loader-relative](https://github.com/xxxxst/css-loader-relative)
+https://github.com/xxxxst/css-loader-relative
 
 ```scss
-//origin
+//input
+@import "/src/assets/css/style.css"
 .home{background: url("/static/image.png");}
-//replace
+//output
+@import "assets/css/style.css"
 .home{background: url("./static/image.png");}
 ```
 
@@ -18,7 +20,7 @@ npm install --save-dev css-loader-relative
 
 <h2 align="center">Usage</h2>
 
-add this plugin after css-loader
+keep this plugin before scss-loader
 
 ## Vue
 
@@ -34,38 +36,20 @@ exports.cssLoaders = function(options) {
 
 	function generateLoaders(loader, loaderOptions) {
 		const loaders = options.usePostCSS
-			? [cssLoader, cssLoaderRelative, postcssLoader]
-			: [cssLoader, cssLoaderRelative];
+			? [cssLoader, postcssLoader]
+            : [cssLoader];
+        
+        if(loader) {
+            loaders.push({
+				loader: loader + '-loader',
+				options: Object.assign({}, loaderOptions, {
+					sourceMap: options.sourceMap
+				})
+            });
+            // add plugin at here
+			loaders.push(cssLoaderRelative);
+        }
 		...
-	}
-}
-```
-
-**build/vue-loader.conf.js**
-```js
-module.exports = {
-	...
-	options: {
-		loaders: {
-			scss: 'vue-style-loader!css-loader!css-loader-relative!sass-loader', // <style lang="scss">
-			sass: 'vue-style-loader!css-loader!css-loader-relative!sass-loader?indentedSyntax' // <style lang="sass">
-		},
-	}
-}
-```
-
-**build/webpack.base.conf.js**
-```js
-module.exports = {
-	...
-	module: { 
-		rules:[
-			...
-			{
-				test: /\.s[a|c]ss$/,
-				loader: 'style!css!css-loader-relative!sass'
-			}
-		]
 	}
 }
 ```
